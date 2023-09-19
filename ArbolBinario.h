@@ -209,7 +209,7 @@ NodoArbol<T> *ArbolBinario<T>::findMaxAndRemove(NodoArbol<T> *r, bool *found)
   ret = findMaxAndRemove(r->getRight(), found);
   if (*found)
   {
-    r->setRight(nullptr);
+    r->setRight(ret);
     *found = false;
   }
 
